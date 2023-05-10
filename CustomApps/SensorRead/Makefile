@@ -1,0 +1,14 @@
+include $(APPDIR)/Make.defs
+
+# Task zero application info
+
+PROGNAME = $(CONFIG_CUSTOM_APPS_SENSOR_READ_PROGNAME)
+PRIORITY = $(CONFIG_CUSTOM_APPS_SENSOR_READ_PRIORITY)
+STACKSIZE = $(CONFIG_CUSTOM_APPS_SENSOR_READ_STACKSIZE)
+MODULE = $(CONFIG_CUSTOM_APPS_SENSOR_READ)
+
+# Task Zero Source
+
+MAINSRC = sensor_read_main.c
+
+include $(APPDIR)/Application.mk

@@ -1,0 +1,28 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+
+config CUSTOM_APPS_SENSOR_READ
+    tristate "Sensor read Example"
+    default n
+    ---help---
+        Enable the sensor read example
+
+if CUSTOM_APPS_SENSOR_READ
+
+config CUSTOM_APPS_SENSOR_READ_PROGNAME
+    string "Sensor Read"
+    default "sensor_read"
+    ---help---
+        This is the name of the program that will be used when the NSH ELF
+        program is installed.
+
+config CUSTOM_APPS_SENSOR_READ_PRIORITY
+    int "Sensor Read example task priority"
+    default 100
+
+config CUSTOM_APPS_SENSOR_READ_STACKSIZE
+    int "Task stack size"
+    default DEFAULT_TASK_STACKSIZE
+
+endif

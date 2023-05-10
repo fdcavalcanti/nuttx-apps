@@ -1,0 +1,14 @@
+include $(APPDIR)/Make.defs
+
+# Task zero application info
+
+PROGNAME = $(CONFIG_CUSTOM_APPS_TASK_ZERO_PROGNAME)
+PRIORITY = $(CONFIG_CUSTOM_APPS_TASK_ZERO_PRIORITY)
+STACKSIZE = $(CONFIG_CUSTOM_APPS_TASK_ZERO_STACKSIZE)
+MODULE = $(CONFIG_CUSTOM_APPS_TASK_ZERO)
+
+# Task Zero Source
+
+MAINSRC = task_zero_main.c
+
+include $(APPDIR)/Application.mk

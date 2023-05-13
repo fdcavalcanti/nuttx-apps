@@ -7,5 +7,6 @@
 
 menu "Custom Apps"
 source "/home/filipe/nuttxspace/apps/CustomApps/SensorRead/Kconfig"
+source "/home/filipe/nuttxspace/apps/CustomApps/TaskQueue/Kconfig"
 source "/home/filipe/nuttxspace/apps/CustomApps/TaskZero/Kconfig"
 endmenu # Custom Apps

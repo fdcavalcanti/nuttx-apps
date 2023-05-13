@@ -1,0 +1,14 @@
+include $(APPDIR)/Make.defs
+
+# Task zero application info
+
+PROGNAME = $(CONFIG_CUSTOM_APPS_TASK_QUEUE_PROGNAME)
+PRIORITY = $(CONFIG_CUSTOM_APPS_TASK_QUEUE_PRIORITY)
+STACKSIZE = $(CONFIG_CUSTOM_APPS_TASK_QUEUE_STACKSIZE)
+MODULE = $(CONFIG_CUSTOM_APPS_TASK_QUEUE)
+
+# Task Queue Source
+
+MAINSRC = task_queue_main.c
+
+include $(APPDIR)/Application.mk

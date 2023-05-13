@@ -1,0 +1,28 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+
+config CUSTOM_APPS_TASK_QUEUE
+    tristate "Task Queue Example"
+    default n
+    ---help---
+        Enable the Task Queue Example
+
+if CUSTOM_APPS_TASK_QUEUE
+
+config CUSTOM_APPS_TASK_QUEUE_PROGNAME
+    string "Task Queue"
+    default "task_queue"
+    ---help---
+        This is the name of the program that will be used when the NSH ELF
+        program is installed.
+
+config CUSTOM_APPS_TASK_QUEUE_PRIORITY
+    int "Task Queue example task priority"
+    default 100
+
+config CUSTOM_APPS_TASK_QUEUE_STACKSIZE
+    int "Task stack size"
+    default DEFAULT_TASK_STACKSIZE
+
+endif
